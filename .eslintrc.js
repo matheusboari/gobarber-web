@@ -4,7 +4,12 @@ module.exports = {
     jest: true,
     es6: true,
   },
-  extends: ['standard', 'prettier', 'prettier/react'],
+  extends: [
+    'standard',
+    'prettier',
+    'prettier/react',
+    'plugin:react/recommended',
+  ],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
@@ -32,12 +37,5 @@ module.exports = {
     'no-console': ['error', { allow: ['tron'] }],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
-  },
-  settings: {
-    'import/resolver': {
-      'babel-plugin-root-import': {
-        rootPathSuffix: 'src',
-      },
-    },
   },
 };
